@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+  --orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --lighter-blue: hsl(215, 20%, 18%);
+  --an: hsl(215, 21%, 16%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Overpass';
+  font-size: 13px;
+  background-color: var(--very-dark-blue);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cards */
+
+.card {
+  background-color: var(--dark-blue);
+  border-radius: 15px;
+  padding: 25px 25px;
+  width: 315px;
+}
+
+.card.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 340px;
+  text-align: center;
+  padding: 50px 25px;
+}
+
+@media (max-width: 375px) {
+  .card {
+    margin: 0 2rem;
+  }
+}
+
+/* Utility classes */
+.circle {
+  background-color: var(--lighter-blue);
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: brightness(1.25);
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Style font elements */
+
+h1 {
+  margin-top: 25px;
+  font-size: 1.5rem;
+  color: var(--white);
+}
+
+p {
+  margin-top: 10px;
+  color: var(--light-grey);
+  line-height: 1.6;
+}
+
+/* This is the element that shows the submitted rating on the thank you card */
+p.rating {
+  color: var(--orange);
+  background-color: var(--lighter-blue);
+  filter: brightness(1.25);
+  padding: 3px 15px;
+  border-radius: 50px;
+}
+
+/* Radio buttons */
+
+label {
+  margin-top: 25px;
+  color: var(--medium-grey);
+  display: flex;
+  justify-content: space-between;
+  transition: all 0.3s;
+}
+
+label:hover {
+  background-color: var(--orange);
+  color: var(--white);
+  cursor: pointer;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+input[type='radio']:checked + label {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+/* Submit button */
+
+input[type='submit'] {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  background-color: var(--orange);
+  border: none;
+  color: var(--white);
+  width: 100%;
+  padding: 10px;
+  border-radius: 50px;
+  letter-spacing: 1;
+  transition: all 0.3s;
+}
+
+input[type='submit']:hover {
+  background-color: var(--white);
+  color: var(--orange);
+  cursor: pointer;
+}
+
+/* Thank you image */
+
+.thanks img {
+  width: 35%;
+  margin-bottom: 1rem;
+}
+
+/* Style and positioning for attribution section */
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--medium-grey);
+}
+
+.attribution a {
+  color: var(--medium-grey);
+  transition: all 0.3s;
+}
+
+.attribution a:hover {
+  color: var(--white);
+}
